@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>امتحان الكيمياء – الباب الأول: العناصر الانتقالية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--tx:#1b2333;--mut:#667085;--btn:#1a73e8;--ok:#188038;--okb:#e6f4ea;--bad:#d93025;--badb:#fce8e6;--bd:#dde2ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10141c;--card:#1a2030;--tx:#e8ecf4;--mut:#9aa4b8;--btn:#2f6fe0;--ok:#6dd58c;--okb:#16301f;--bad:#ff8a80;--badb:#3a1c1a;--bd:#2c3550}}
+:root[data-theme="dark"]{--bg:#10141c;--card:#1a2030;--tx:#e8ecf4;--mut:#9aa4b8;--btn:#2f6fe0;--ok:#6dd58c;--okb:#16301f;--bad:#ff8a80;--badb:#3a1c1a;--bd:#2c3550}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Cairo,Tahoma,Arial,sans-serif;line-height:1.8}
+.top{padding:18px 14px;text-align:center;background:linear-gradient(135deg,#1a73e8,#7b4bd8);color:#fff}
+.top h1{margin:0;font-size:clamp(1.05rem,4vw,1.5rem)}.top p{margin:4px 0 0;opacity:.9;font-size:.9rem}
+.card,.q,aside,#res{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+#reg{max-width:440px;margin:28px auto;padding:0 14px}
+input[type=text]{width:100%;padding:12px;border:1px solid var(--bd);border-radius:10px;font:inherit;background:var(--bg);color:var(--tx);margin:10px 0}
+.btn{width:100%;padding:12px;border:0;border-radius:10px;background:var(--btn);color:#fff;font:inherit;font-weight:700;cursor:pointer;margin-top:8px}
+.btn:disabled{opacity:.5;cursor:default}
+.lnk{background:none;border:0;color:var(--btn);font:inherit;cursor:pointer;margin-top:10px;padding:0}
+#err{color:var(--bad);margin:0;min-height:1.5em}
+.wrap{display:grid;grid-template-columns:1fr 290px;gap:16px;max-width:1100px;margin:16px auto;padding:0 12px}
+aside{position:sticky;top:calc(12px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 24px);overflow:auto}
+aside h3{margin:0 0 4px;word-break:break-word}aside h4{margin:14px 0 4px}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}aside{position:static;order:-1;max-height:none}}
+h2{font-size:1.05rem;margin:18px 0 10px;color:var(--btn)}
+.q{margin-bottom:12px}.q p{margin:0 0 4px}
+.o{display:flex;gap:10px;align-items:center;padding:9px 12px;border:1px solid var(--bd);border-radius:10px;margin-top:8px;cursor:pointer}
+.o input{accent-color:var(--btn);width:18px;height:18px;flex:none}
+.o:has(input:checked){border-color:var(--btn);background:rgba(47,111,224,.12)}
+.o.ok{border-color:var(--ok);background:var(--okb)}.o.bad{border-color:var(--bad);background:var(--badb)}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--btn);transition:width .2s}
+.lv{font-size:.72rem;padding:1px 8px;border-radius:99px;margin-inline:4px;font-weight:700}.l1{background:var(--okb);color:var(--ok)}.l2{background:rgba(26,115,232,.15);color:var(--btn)}.l3{background:rgba(240,170,0,.18);color:#b06f00}.l4{background:var(--badb);color:var(--bad)}
+.ex{margin-top:12px;padding:12px;border-radius:10px;background:var(--badb);border:1px dashed var(--bad);font-size:.92rem}.ex b{color:inherit}
+small{color:var(--mut)}
+.nav{display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:4px;margin:10px 0}
+.nav button{padding:4px 0;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit;font-size:.8rem;cursor:pointer}
+.nav .on{background:var(--btn);color:#fff;border-color:var(--btn)}
+.nav .ok{background:var(--okb);border-color:var(--ok)}.nav .bad{background:var(--badb);border-color:var(--bad)}
+.hist{margin:0;padding-inline-start:22px}.hist li{margin-bottom:4px}
+#res{text-align:center;margin-bottom:12px;border-color:var(--btn)}#res h2{font-size:2rem;margin:0}
+#msg{color:var(--bad);font-weight:700}
+</style>
+</head>
+<body>
+<div class="top"><h1>🧪 امتحان الكيمياء – الباب الأول: العناصر الانتقالية</h1><p>60 سؤال: 40 اختيار من متعدد + 20 مقالي بصيغة MCQ — 10 سهل · 20 متوسط · 15 فوق متوسط · 15 صعب</p></div>
+
+<div id="reg"><div class="card">
+<h2 style="margin-top:0">تسجيل الممتحن</h2>
+<label for="nm">اكتب اسمك بالكامل</label>
+<input type="text" id="nm" maxlength="60" autocomplete="name" placeholder="مثال: أحمد محمد علي">
+<p id="err"></p>
+<button class="btn" id="go">ابدأ الامتحان</button>
+</div></div>
+
+<div class="wrap" id="ex" hidden>
+<main id="main"></main>
+<aside id="side"></aside>
+</div>
+
+<script>
+const D=[
+['يتم في عناصر السلسلة الانتقالية الأولى ملء تحت المستوى','4s|3d|4p|4d',1,2],
+['العدد الذري للحديد Fe يساوي','24|25|26|27',2,1],
+['التوزيع الإلكتروني الصحيح لذرة الحديد ₂₆Fe هو','[Ar] 4s² 3d⁶|[Ar] 4s¹ 3d⁷|[Ar] 3d⁸|[Ar] 4s² 3d⁴',0,2],
+['التوزيع الإلكتروني لذرة الكروم ₂₄Cr هو','[Ar] 4s² 3d⁴|[Ar] 4s¹ 3d⁵|[Ar] 3d⁶|[Ar] 4s² 3d⁵',1,2],
+['التوزيع الإلكتروني لذرة النحاس ₂₉Cu هو','[Ar] 4s² 3d⁹|[Ar] 4s¹ 3d¹⁰|[Ar] 4s² 3d¹⁰|[Ar] 3d¹¹',1,2],
+['أحد العناصر التالية لا يعتبر عنصرًا انتقاليًا','Fe|Co|Zn|Ni',2,1],
+['عند اختزال 1 mol من MnO₄⁻ إلى MnO₂ في وسط متعادل يكتسب عدد مولات الإلكترونات','1|3|5|7',1,4],
+['عدد تأكسد المنجنيز في KMnO₄ هو','+2|+4|+6|+7',3,2],
+['عدد تأكسد الكروم في K₂Cr₂O₇ هو','+3|+6|+7|+2',1,2],
+['أيون Zn²⁺ عديم اللون لأن','تحت المستوى 3d ممتلئ تمامًا|تحت المستوى 3d فارغ|يحتوي على 5 إلكترونات مفردة|يحتوي على إلكترونين مفردين',0,3],
+['أي الأيونات التالية بارامغناطيسي؟','Zn²⁺|Cu⁺|Sc³⁺|Fe³⁺',3,3],
+['عدد الإلكترونات المفردة في أيون Fe³⁺ (₂₆Fe)','3|4|5|6',2,3],
+['عدد الإلكترونات المفردة في أيون Cu²⁺ (₂₉Cu)','صفر|1|2|3',1,3],
+['كتلة الحديد الناتجة من اختزال 464 g من Fe₃O₄ كليًا (Fe = 56 , O = 16)','168 g|336 g|448 g|504 g',1,4],
+['العامل الحفاز في تحضير حمض الكبريتيك بطريقة التلامس','Fe|V₂O₅|Ni|MnO₂',1,1],
+['العامل الحفاز المستخدم في تحضير النشادر بطريقة هابر','النيكل|الفاناديوم|الحديد|النحاس',2,1],
+['احسب العزم المغناطيسي النظري μ = √(n(n+2)) بوحدة BM لأيون Cr³⁺ (₂₄Cr)','2.83|3.87|4.90|5.92',1,4],
+['عنصر انتقالي (M) يحتوي أيونه M³⁺ على 4 إلكترونات مفردة في 3d ، فيكون عدده الذري','23|24|25|26',2,4],
+['يحتوي محلول فهلنج على أيونات','Cu²⁺|Fe²⁺|Zn²⁺|Ni²⁺',0,2],
+['سبيكة البرونز تتكون من النحاس و','الخارصين|القصدير|النيكل|الألومنيوم',1,1],
+['كم مولًا من KMnO₄ يلزم لأكسدة 10 mol من FeSO₄ في وسط حمضي؟','1|2|5|10',1,3],
+['تغطية الحديد بطبقة من الخارصين تسمى','الجلفنة|الطلاء الكهربي|التبريد|الكربنة',0,1],
+['أي الترتيبات التالية صحيح لتزايد عدد الإلكترونات المفردة؟','Zn²⁺ < Cu²⁺ < Co²⁺ < Fe³⁺|Cu²⁺ < Zn²⁺ < Fe³⁺ < Co²⁺|Zn²⁺ < Co²⁺ < Cu²⁺ < Fe³⁺|Fe³⁺ < Co²⁺ < Cu²⁺ < Zn²⁺',0,4],
+['حجم غاز H₂ المتصاعد في STP من تفاعل 5.6 g من الحديد (Fe = 56) مع HCl المخفف بوفرة','1.12 L|2.24 L|3.36 L|4.48 L',1,3],
+['في المعقد K₃[Fe(CN)₆] يكون عدد تأكسد الحديد وعدد التناسق على الترتيب','+3 و 6|+2 و 6|+3 و 3|+2 و 4',0,3],
+['أي المركبات التالية يحتوي على الحديد في أعلى عدد تأكسد؟','FeO|Fe₂O₃|K₂FeO₄|FeSO₄',2,4],
+['أقل أنواع الحديد في نسبة الكربون','حديد الزهر|الصلب|الحديد المطاوع|الحديد الخام',2,2],
+['صدأ الحديد عبارة عن','Fe₂O₃·xH₂O|FeO|FeCl₃|Fe₃C',0,1],
+['يلزم لصدأ الحديد وجود','أكسجين ورطوبة|أكسجين فقط|ماء فقط|نيتروجين وماء',0,1],
+['عدد مولات الإلكترونات التي يكتسبها 1 mol من K₂Cr₂O₇ عند اختزاله إلى Cr³⁺ في وسط حمضي','3|4|6|7',2,4],
+['يصبح الحديد خاملًا (سلبيًا) عند تفاعله مع','HCl المخفف|H₂SO₄ المخفف|HNO₃ المركز|الماء',2,2],
+['كتلة FeS الناتجة من تسخين 11.2 g من الحديد مع 6.4 g من الكبريت (Fe = 56 , S = 32)','11.2 g|16.0 g|17.6 g|22.0 g',2,3],
+['لون محلول برمنجنات البوتاسيوم','بنفسجي|أخضر|برتقالي|أزرق',0,1],
+['لون محلول ثنائي كرومات البوتاسيوم','بنفسجي|برتقالي|أخضر|عديم اللون',1,1],
+['السبب الرئيسي لارتفاع كثافة ودرجة انصهار العناصر الانتقالية','قوة الرابطة الفلزية بمشاركة إلكترونات 4s و3d|ضعف الرابطة الفلزية|امتلاء 3d|كبر نصف القطر',0,3],
+['عدد تأكسد الكوبلت في المعقد [Co(NH₃)₅Cl]Cl₂ هو','+1|+2|+3|+4',2,4],
+['كتلة الحديد الناتجة من 1 طن من خام الهيماتيت النقي Fe₂O₃ (Fe = 56 , O = 16) تساوي','560 kg|630 kg|700 kg|770 kg',2,4],
+['أي الأيونات التالية يمتلك أكبر عدد من الإلكترونات المفردة؟','Fe²⁺|Mn²⁺|Co²⁺|Ni²⁺',1,4],
+['عدد الأوربيتالات نصف الممتلئة في ذرة المنجنيز ₂₅Mn في حالتها المستقرة','3|4|5|6',2,4],
+['أي أيونين من التالية يتساويان في عدد الإلكترونات المفردة؟','Fe³⁺ و Mn²⁺|Fe²⁺ و Cu²⁺|Co²⁺ و Ni²⁺|Zn²⁺ و Cr³⁺',0,4],
+['علل: تتعدد حالات التأكسد في العناصر الانتقالية','لتقارب طاقتي 4s و3d فتشترك إلكترونات التحت مستويين|لكبر نصف قطرها|لامتلاء 3d|لضعف الرابطة الفلزية',0,2],
+['علل: مركبات العناصر الانتقالية غالبًا ملونة','لوجود إلكترونات مفردة في 3d تسمح بانتقالات d–d|لامتلاء 3d بالكامل|لعدم وجود أوربيتالات d|لارتفاع درجة الانصهار',0,2],
+['علل: التوزيع الإلكتروني للكروم [Ar] 4s¹ 3d⁵ وليس 4s² 3d⁴','لزيادة الاستقرار بنصف امتلاء 3d|لزيادة الاستقرار بامتلاء 3d|لأن 3d أقل طاقة من 4s دائمًا|لعدم تطبيق مبدأ البناء',0,2],
+['علل: التوزيع الإلكتروني للنحاس [Ar] 4s¹ 3d¹⁰','لزيادة الاستقرار بامتلاء 3d|لزيادة الاستقرار بنصف امتلاء 3d|لأن Cu عنصر لا فلزي|لوجود إلكترون مفرد في 3d',0,2],
+['علل: يضاف الحجر الجيري إلى خام الحديد في الفرن العالي','لإزالة SiO₂ على هيئة خبث CaSiO₃|لاختزال أكسيد الحديد|لرفع نسبة الكربون|لتبريد الفرن',0,2],
+['علل: تحمي الجلفنة الحديد من الصدأ','لأن الخارصين أنشط فيتأكسد قبل الحديد|لأن الخارصين أقل نشاطًا من الحديد|لأن الخارصين لا يتأكسد|لأن الخارصين يعزل الحرارة',0,2],
+['علل: لا يتفاعل الحديد مع HNO₃ المركز','لتكوّن طبقة أكسيد رقيقة متماسكة تحميه|لأن الحديد عنصر خامل|لأن الحمض ضعيف|لتصاعد غاز H₂ بسرعة',0,3],
+['علل: يستخدم التيتانيوم في الأطراف الصناعية','لأنه خفيف وقوي ولا يتفاعل مع سوائل الجسم|لأنه مغناطيسي|لأنه سهل الانصهار|لأنه أنشط الفلزات',0,2],
+['ماذا يحدث عند إضافة NaOH إلى محلول FeCl₃؟','يتكون راسب بني محمر|يتكون راسب أبيض|يتكون راسب أزرق|لا يحدث تفاعل',0,2],
+['ماذا يحدث عند تسخين الحديد في تيار من الكلور؟','يتكون FeCl₃|يتكون FeCl₂|يتكون FeO|لا يحدث تفاعل',0,2],
+['ماذا يحدث عند تمرير بخار الماء على الحديد الساخن لدرجة الاحمرار؟','يتكون Fe₃O₄ ويتصاعد H₂|يتكون Fe₂O₃ ويتصاعد O₂|يتكون Fe(OH)₃|لا يحدث تفاعل',0,2],
+['ماذا يحدث عند تفاعل الحديد مع HCl المخفف؟','يتكون FeCl₂ ويتصاعد H₂|يتكون FeCl₃ ويتصاعد H₂|يتكون FeCl₃ ويتصاعد Cl₂|لا يحدث تفاعل',0,2],
+['المعادلة الموزونة لاختزال Fe₂O₃ بغاز CO هي','Fe₂O₃ + 3CO → 2Fe + 3CO₂|Fe₂O₃ + CO → 2Fe + CO₂|2Fe₂O₃ + 3CO → 4Fe + 3CO₂|Fe₂O₃ + 2CO → 2Fe + 2CO₂',0,3],
+['معادلة تكوّن الصدأ: 4Fe + 3O₂ + 2xH₂O → ؟','2Fe₂O₃·xH₂O|4FeO·xH₂O|2Fe₃O₄·xH₂O|4Fe(OH)₂',0,3],
+['احسب كتلة الحديد الناتجة من اختزال 160 g من Fe₂O₃ (Fe = 56 , O = 16)','56 g|112 g|160 g|224 g',1,4],
+['احسب عدد تأكسد المنجنيز في MnO₄²⁻','+4|+5|+6|+7',2,3],
+['احسب عدد الإلكترونات المفردة في Co²⁺ (₂₇Co)','1|2|3|5',2,3],
+['احسب عدد الإلكترونات المفردة في Ni²⁺ (₂₈Ni)','صفر|1|2|4',2,3],
+['عدد مولات CO اللازمة لاختزال 2 mol من Fe₃O₄ كليًا إلى Fe (Fe₃O₄ + 4CO → 3Fe + 4CO₂)','4|6|8|12',2,4],
+['عدد مولات FeSO₄ التي يؤكسدها 1 mol من KMnO₄ في وسط حمضي (MnO₄⁻ → Mn²⁺ , Fe²⁺ → Fe³⁺)','1|3|5|7',2,4]
+];
+const E=["يتم ملء 4s أولًا (أقل طاقة) ثم 3d في عناصر السلسلة الانتقالية الأولى من Sc إلى Zn.", "العدد الذري للحديد 26 (يأتي بعد المنجنيز 25 وقبل الكوبلت 27).", "₂₆Fe: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ أي [Ar] 4s² 3d⁶ (18 + 2 + 6 = 26).", "الكروم حالة شاذة: ينتقل إلكترون من 4s إلى 3d فيصبح [Ar] 4s¹ 3d⁵ لأن نصف امتلاء 3d أكثر استقرارًا.", "النحاس حالة شاذة: ينتقل إلكترون من 4s إلى 3d فيصبح [Ar] 4s¹ 3d¹⁰ لأن امتلاء 3d أكثر استقرارًا.", "الخارصين تحت المستوى 3d في ذرته وأيونه Zn²⁺ ممتلئ (3d¹⁰) فلا يعتبر عنصرًا انتقاليًا.", "عدد تأكسد Mn في MnO₄⁻ هو +7 وفي MnO₂ هو +4، فيكتسب الأيون 3 مولات إلكترونات.", "KMnO₄: (+1) + x + 4(−2) = 0 ومنها x = +7.", "K₂Cr₂O₇: 2(+1) + 2x + 7(−2) = 0 ومنها x = +6.", "Zn²⁺ تركيبه [Ar] 3d¹⁰ ممتلئ، لا توجد إلكترونات مفردة أو انتقالات d–d، فيكون عديم اللون.", "Fe³⁺ تركيبه 3d⁵ به 5 إلكترونات مفردة فهو بارامغناطيسي، أما Zn²⁺ و Cu⁺ (3d¹⁰) و Sc³⁺ (بدون إلكترونات d) فجميعها ديامغناطيسية.", "Fe³⁺ = [Ar] 3d⁵: كل أوربيتال من الخمسة يحتوي إلكترونًا واحدًا، فالعدد 5.", "Cu²⁺ = [Ar] 3d⁹: أوربيتال واحد فقط به إلكترون مفرد، فالعدد 1.", "Fe₃O₄ = 232 g/mol، فـ 464 g = 2 mol. كل 1 mol ينتج 3 mol Fe، فيكون الناتج 6 mol × 56 = 336 g.", "خامس أكسيد الفاناديوم V₂O₅ هو العامل الحفاز في أكسدة SO₂ إلى SO₃ بطريقة التلامس.", "الحديد هو العامل الحفاز في تحضير النشادر بطريقة هابر: N₂ + 3H₂ ⇌ 2NH₃.", "Cr³⁺ = [Ar] 3d³ فعدد الإلكترونات المفردة n = 3، و μ = √(3 × 5) = √15 ≈ 3.87 BM.", "M³⁺ تركيبه 3d⁴، فالذرة المتعادلة [Ar] 4s² 3d⁵ أي 18 + 7 = 25 (المنجنيز).", "محلول فهلنج يحتوي على أيونات النحاس Cu²⁺، وتختزل بالجلوكوز إلى راسب برتقالي من Cu₂O.", "البرونز سبيكة من النحاس والقصدير، أما النحاس الأصفر فنحاس وخارصين.", "كل 1 mol من KMnO₄ يؤكسد 5 mol من Fe²⁺ (يكتسب 5e⁻ ويفقد كل Fe²⁺ إلكترونًا واحدًا)، فـ 10 mol تحتاج 2 mol.", "تغطية الحديد بطبقة من الخارصين تسمى الجلفنة وتحميه من الصدأ.", "عدد الإلكترونات المفردة: Zn²⁺ = 0 ، Cu²⁺ = 1 ، Co²⁺ = 3 ، Fe³⁺ = 5، وهذا هو الترتيب التصاعدي الصحيح.", "Fe + 2HCl → FeCl₂ + H₂. كتلة 5.6 g = 0.1 mol Fe تعطي 0.1 mol H₂، والحجم = 0.1 × 22.4 = 2.24 L.", "K₃[Fe(CN)₆]: 3(+1) + x + 6(−1) = 0 ومنها x = +3. عدد التناسق = عدد الليجاندات CN⁻ المرتبطة = 6.", "K₂FeO₄: 2(+1) + x + 4(−2) = 0 ومنها x = +6، وهو أعلى من +2 في FeO و FeSO₄ ومن +3 في Fe₂O₃.", "الحديد المطاوع أنقى أنواع الحديد وأقلها في نسبة الكربون.", "الصدأ هو أكسيد الحديد III المائي Fe₂O₃·xH₂O.", "يتكون الصدأ بوجود الأكسجين والرطوبة (الماء) معًا.", "Cr₂O₇²⁻ → 2Cr³⁺: كل ذرة كروم تنتقل من +6 إلى +3 فتكتسب 3e⁻، والذرتان تكتسبان 6 mol إلكترونات.", "HNO₃ المركز يكوّن على سطح الحديد طبقة أكسيد رقيقة متماسكة تجعله سلبيًا (خاملًا).", "Fe = 11.2 ÷ 56 = 0.2 mol و S = 6.4 ÷ 32 = 0.2 mol بنسبة 1 : 1، فينتج 0.2 mol من FeS = 0.2 × 88 = 17.6 g.", "محلول KMnO₄ لونه بنفسجي بسبب أيون البرمنجنات MnO₄⁻.", "محلول K₂Cr₂O₇ لونه برتقالي بسبب أيون الدايكرومات Cr₂O₇²⁻.", "ترتفع الكثافة ودرجة الانصهار لقوة الرابطة الفلزية الناتجة من اشتراك إلكترونات 4s و 3d المفردة.", "الأيون المعقد [Co(NH₃)₅Cl]²⁺ شحنته +2 (لوجود 2Cl⁻ خارجه): x + 0 + (−1) = +2 ومنها x = +3.", "Fe₂O₃ = 160 فيه 112 Fe، أي نسبة 70%. وبذلك 1000 kg × 0.7 = 700 kg.", "Mn²⁺ (3d⁵) له 5 إلكترونات مفردة وهو الأكبر، مقابل Fe²⁺ (4) و Co²⁺ (3) و Ni²⁺ (2).", "Mn: 4s² 3d⁵ والأوربيتالات نصف الممتلئة هي الخمسة أوربيتالات 3d، أما 4s فممتلئ تمامًا.", "Fe³⁺ (3d⁵) و Mn²⁺ (3d⁵) كلاهما له 5 إلكترونات مفردة.", "لتقارب طاقتي 4s و 3d تشترك إلكترونات التحت مستويين في تكوين الروابط فتتعدد حالات التأكسد.", "لوجود إلكترونات مفردة في 3d تنتقل بين أوربيتالات d عند امتصاص جزء من الضوء المرئي فتظهر المركبات ملونة.", "نصف امتلاء 3d في الكروم (3d⁵) يعطي استقرارًا أكبر من 4s² 3d⁴.", "امتلاء 3d في النحاس (3d¹⁰) يعطي استقرارًا أكبر من 4s² 3d⁹.", "CaCO₃ → CaO + CO₂ ثم CaO + SiO₂ → CaSiO₃ (الخبث)، وهكذا تتخلص من الشوائب الحمضية SiO₂.", "الخارصين أنشط من الحديد فيتأكسد هو أولًا ويحمي الحديد حتى لو تكسرت الطبقة.", "تتكون طبقة رقيقة متماسكة من الأكسيد تمنع استمرار التفاعل مع الحمض.", "التيتانيوم خفيف وقوي ومقاوم للتآكل ولا يتفاعل مع سوائل الجسم، فيستخدم في الأطراف والمفاصل الصناعية.", "FeCl₃ + 3NaOH → Fe(OH)₃ ↓ + 3NaCl، والراسب لونه بني محمر.", "2Fe + 3Cl₂ → 2FeCl₃ لأن الكلور عامل مؤكسد قوي يؤكسد الحديد إلى Fe³⁺.", "3Fe + 4H₂O(g) ⇌ Fe₃O₄ + 4H₂ عند درجة الاحمرار.", "Fe + 2HCl → FeCl₂ + H₂، فالحمض المخفف غير المؤكسد يعطي Fe²⁺.", "Fe₂O₃ + 3CO → 2Fe + 3CO₂: عدد ذرات Fe = 2 و C = 3 و O = 6 في الطرفين.", "4Fe + 3O₂ + 2xH₂O → 2Fe₂O₃·xH₂O (الماء يدخل كماء تبلور في الصدأ).", "160 g من Fe₂O₃ = 1 mol ينتج 2 mol Fe كتلتها 2 × 56 = 112 g.", "MnO₄²⁻: x + 4(−2) = −2 ومنها x = +6.", "Co²⁺ = [Ar] 3d⁷: أوربيتالان ممتلئان وثلاثة بها إلكترونات مفردة، فالعدد 3.", "Ni²⁺ = [Ar] 3d⁸: ثلاثة أوربيتالات ممتلئة وأوربيتالان بهما إلكترونان مفردان، فالعدد 2.", "Fe₃O₄ + 4CO → 3Fe + 4CO₂، فكل 1 mol يحتاج 4 mol CO، و 2 mol تحتاج 8 mol.", "MnO₄⁻ → Mn²⁺ يكتسب 5e⁻، و Fe²⁺ → Fe³⁺ يفقد 1e⁻، فيؤكسد 1 mol KMnO₄ عدد 5 mol من FeSO₄."];
+const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const store=f=>{try{return f()}catch(e){}};
+let name='',hist=[],Q=[],ans=[],done=false,warned=false;
+const key=()=>'chem1:'+name.toLowerCase();
+store(()=>{$('#nm').value=localStorage.getItem('chem1:last')||''});
+
+function start(){
+ const v=$('#nm').value.trim();
+ if(v.length<2){$('#err').textContent='اكتب اسمك بالكامل (حرفين على الأقل)';return}
+ name=v;
+ hist=store(()=>JSON.parse(localStorage.getItem(key())||'[]'))||[];
+ store(()=>localStorage.setItem('chem1:last',name));
+ $('#reg').hidden=true;$('#ex').hidden=false;fresh();
+}
+function fresh(){
+ Q=D.map(([q,o,c,l],i)=>({q,l,e:E[i],o:sh(o.split('|').map((t,i)=>({t,c:i==c})))}));
+ ans=Array(60).fill(-1);done=false;warned=false;
+ $('#main').innerHTML='<div id="res" hidden></div>'+Q.map((x,i)=>
+  (i==0?'<h2>الجزء الأول: اختر الإجابة الصحيحة (40 سؤال)</h2>':i==40?'<h2>الجزء الثاني: الأسئلة المقالية بصيغة MCQ (20 سؤال)</h2>':'')+
+  `<div class="q" id="q${i}"><p><b>${i+1}.</b> <span class="lv l${x.l}">${["","سهل","متوسط","فوق متوسط","صعب"][x.l]}</span> ${x.q}</p>`+
+  x.o.map((o,j)=>`<label class="o"><input type="radio" name="q${i}" value="${j}"><span dir="auto">${o.t}</span></label>`).join('')+'</div>').join('')+
+  '<p id="msg"></p><button class="btn" id="sub2">تسليم الامتحان</button>';
+ side();scrollTo(0,0);
+}
+function side(){
+ const a=ans.filter(v=>v>=0).length;
+ $('#side').innerHTML=`<h3>👤 ${esc(name)}</h3>
+ <p style="margin:0"><b>${esc(name)}</b> — عدد المحاولات المسلّمة: <b>${hist.length}</b><br>المحاولة الحالية: <b>${hist.length+(done?0:1)}</b></p>
+ <div class="bar" style="margin-top:10px"><i style="width:${a/.6}%"></i></div><small>تمت الإجابة على ${a} من 60</small>
+ <div class="nav">${Q.map((x,i)=>`<button data-i="${i}" class="${done?(x.o[ans[i]]?.c?'ok':'bad'):ans[i]>=0?'on':''}">${i+1}</button>`).join('')}</div>
+ <button class="btn" id="sub1" ${done?'disabled':''}>تسليم</button>
+ <h4>نتيجة كل محاولة</h4>${hist.length?'<ol class="hist">'+hist.map(h=>`<li><b>${esc(name)}</b>: <b>${h.s}/60</b> (${Math.round(h.s/.6)}%) <small>${h.d}</small></li>`).join('')+'</ol>':'<small>لا توجد محاولات بعد</small>'}
+ <button class="lnk" id="chg">تغيير الاسم</button>`;
+}
+function submit(){
+ if(done)return;
+ const left=ans.filter(v=>v<0).length;
+ if(left&&!warned){warned=true;$('#msg').textContent=`⚠️ لسه ${left} سؤال بدون إجابة. اضغط تسليم مرة تانية لو عايز تسلّم كده.`;$('#msg').scrollIntoView({block:'center'});return}
+ const s=Q.reduce((n,x,i)=>n+(x.o[ans[i]]?.c?1:0),0),p=Math.round(s/.6);
+ hist.push({s,d:new Date().toLocaleString('ar-EG',{dateStyle:'short',timeStyle:'short'})});
+ store(()=>localStorage.setItem(key(),JSON.stringify(hist)));
+ done=true;
+ Q.forEach((x,i)=>{$('#q'+i).querySelectorAll('label').forEach((l,j)=>{l.classList.toggle('ok',x.o[j].c);l.classList.toggle('bad',ans[i]==j&&!x.o[j].c);l.firstChild.disabled=true})
+  if(!x.o[ans[i]]?.c){const r=x.o.find(o=>o.c);$('#q'+i).insertAdjacentHTML('beforeend',`<div class="ex"><b>${ans[i]<0?'⚪ لم تجب على هذا السؤال':'❌ إجابتك خاطئة'}</b><br>✅ الإجابة الصحيحة: <b dir="auto">${r.t}</b><br>💡 الشرح: ${esc(x.e)}</div>`)}
+ });
+ const r=$('#res');r.hidden=false;
+ r.innerHTML=`<h2>${s} / 60</h2><p>${p}% — ${p>=90?'ممتاز 🌟':p>=75?'جيد جدًا 👏':p>=50?'جيد، راجع الأخطاء بالأحمر':'محتاج مراجعة تانية للباب'}</p><button class="btn" id="again">محاولة جديدة</button>`;
+ $('#msg').textContent='';$('#sub2').hidden=true;side();r.scrollIntoView({block:'start'});
+}
+$('#main').addEventListener('change',e=>{if(done||e.target.type!='radio')return;ans[+e.target.name.slice(1)]=+e.target.value;side()});
+$('#nm').addEventListener('keydown',e=>{if(e.key=='Enter')start()});
+document.addEventListener('click',e=>{
+ const t=e.target.closest('button');if(!t)return;
+ if(t.id=='go')start();
+ else if(t.id=='sub1'||t.id=='sub2')submit();
+ else if(t.id=='again')fresh();
+ else if(t.id=='chg'){$('#ex').hidden=true;$('#reg').hidden=false;$('#err').textContent=''}
+ else if(t.dataset.i!=null)$('#q'+t.dataset.i).scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
